@@ -24,15 +24,17 @@ Instalasi FastAPI:
         • Windows PowerShell: .venv\Scripts\Activate.ps1
         • Windows Bash: source .venv/Scripts/activate
     Cek virtual environment sudah aktif:
+        Windows Bash: which python
         Windows PowerShell: Get-Command python
     Tambahkan file .gitignore di root folder, ketik: 
         .venv/
     Install FastAPI: 
         pip install "fastapi[standard]"
-    Install dari requirements.txt: 
+    Install dari requirements.txt (TIDAK WAJIB)
         pip install -r requirements.txt
     Cek FastAPI sudah terinstal: 
         pip show fastapi
+        #paling penting ada version fastapinya
 
 Bentuk file bahasa python, misal main.py
 Jalankan server (development mode): 
@@ -43,3 +45,4 @@ Jalankan server (development mode):
         • Akses dokumentasi:
             Swagger UI: http://127.0.0.1:8000/docs
             ReDoc: http://127.0.0.1:8000/redoc
+    Terminate Ctrl-C

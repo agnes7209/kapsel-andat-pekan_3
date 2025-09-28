@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from fastapi import HTTPExeption
+from fastapi import HTTPException
 from modules.items.schema.schemas import Item 
 from modules.items.routes.createItem import items
 
@@ -11,4 +11,4 @@ def update_item(item_id: int, update_item: Item):
         if item.id == item_id:
             items[index] = updated_item
             return update_item
-    raise HTTPExeption(status_code=404, detail="Item not found")
+    raise HTTPException(status_code=404, detail="Item not found")

@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from fastapi import HTTPExeption
+from fastapi import HTTPException
 from modules.items.routes.createItem import items
 
 router = APIRouter()
@@ -10,4 +10,4 @@ def delete_item(item_id: int):
         if item.id == item_id:
             items.pop(index)
             return {"massage": f"Item {item_id} deleted"}
-    raise HTTPExeption(status_code=404, detail="Item not found")
+    raise HTTPException(status_code=404, detail="Item not found")
